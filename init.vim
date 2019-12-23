@@ -1,13 +1,8 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
 Plug 'ndmitchell/ghcid'
-Plug 'ap/vim-buftabline'
+"Plug 'ap/vim-buftabline'
 Plug 'icymind/NeoSolarized'
-Plug 'morhetz/gruvbox'
-Plug 'vim-scripts/oceanlight'
-Plug 'NLKNguyen/papercolor-theme'
-Plug 'mkarmona/materialbox'
-Plug 'rakr/vim-one'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -15,7 +10,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'itchyny/lightline.vim'
 Plug 'Twinside/vim-hoogle'
 Plug 'airblade/vim-gitgutter'
-Plug 'ayu-theme/ayu-vim'
 Plug 'flrnd/plastic.vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'romainl/flattened'
@@ -45,12 +39,7 @@ set winminwidth=30
 set t_ut=""
 set termguicolors
 set background=light
-"colorscheme solarized8_flat
-"colorscheme gruvbox
-"colorscheme one
 colorscheme NeoSolarized
-"colorscheme night-owl
-
 
 syntax on
 filetype plugin indent on
@@ -64,12 +53,12 @@ let g:neosolarized_italic = 0
 
 
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
-"let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
-"let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
-"let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
-"let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
-"let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
-"let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
+let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`
+let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
+let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
+let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
+let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
 
 command! LightlineReload call LightlineReload()
 
@@ -114,11 +103,14 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
 
-:map <expr> <A-,> @% =~ "NERD" ? "<C-c>" : "<C-c>:bprev<CR>"
-:map <expr> <A-.> @% =~ "NERD" ? "<C-c>" : "<C-c>:bnext<CR>"
+":map <expr> <A-,> @% =~ "NERD" ? "<C-c>" : "<C-c>:bprev<CR>"
+":map <expr> <A-.> @% =~ "NERD" ? "<C-c>" : "<C-c>:bnext<CR>"
+:map <A-,> <C-c>:tabprevious<CR>
+:map <A-.> <C-c>:tabnext<CR>
+:map <A-n> <C-c>:tabnew<CR>
 :map <A-d> <C-c>:bp<CR>:bdelete #<CR>
 
-:noremap <C-s> <C-c>:w<CR>
-:inoremap <C-s> <C-c>:w<CR>
+:noremap <A-s> <C-c>:w<CR>
+:inoremap <A-s> <C-c>:w<CR>
 
 :map <F8> <C-c>:NERDTreeToggle<CR>
