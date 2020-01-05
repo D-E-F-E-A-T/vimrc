@@ -1,7 +1,5 @@
 call plug#begin()
 Plug 'scrooloose/nerdtree'
-Plug 'ndmitchell/ghcid'
-"Plug 'ap/vim-buftabline'
 Plug 'icymind/NeoSolarized'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -13,17 +11,13 @@ Plug 'airblade/vim-gitgutter'
 Plug 'flrnd/plastic.vim'
 Plug 'ajmwagar/vim-deus'
 Plug 'romainl/flattened'
-Plug 'whatyouhide/vim-gotham'
-Plug 'dracula/vim'
-Plug 'srcery-colors/srcery-vim'
-Plug 'sjl/badwolf'
 Plug 'YorickPeterse/happy_hacking.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
-Plug 'aiya000/vim-ghcid-quickfix'
 Plug 'mileszs/ack.vim'
-Plug 'haishanh/night-owl.vim'
 call plug#end()
+
+set relativenumber
 
 set shiftwidth=2
 set tabstop=2
@@ -103,8 +97,6 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 :tnoremap <A-k> <C-\><C-n><C-w>k
 :tnoremap <A-l> <C-\><C-n><C-w>l
 
-":map <expr> <A-,> @% =~ "NERD" ? "<C-c>" : "<C-c>:bprev<CR>"
-":map <expr> <A-.> @% =~ "NERD" ? "<C-c>" : "<C-c>:bnext<CR>"
 :map <A-,> <C-c>:tabprevious<CR>
 :map <A-.> <C-c>:tabnext<CR>
 :map <A-n> <C-c>:tabnew<CR>
