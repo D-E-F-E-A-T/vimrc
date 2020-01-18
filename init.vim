@@ -104,7 +104,6 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 :map <A-,> <C-c>:tabprevious<CR>
 :map <A-.> <C-c>:tabnext<CR>
 :map <A-n> <C-c>:tabnew<CR>
-:map <A-d> <C-c>:bp<CR>:bdelete #<CR>
 
 :noremap <A-s> <C-c>:w<CR>
 :nnoremap ; :
