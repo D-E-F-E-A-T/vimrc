@@ -14,7 +14,10 @@ Plug 'romainl/flattened'
 Plug 'YorickPeterse/happy_hacking.vim'
 Plug 'lifepillar/vim-solarized8'
 Plug 'altercation/vim-colors-solarized'
+Plug 'rakr/vim-one'
 Plug 'mileszs/ack.vim'
+Plug 'Lokaltog/vim-distinguished'
+Plug 'cormacrelf/vim-colors-github'
 call plug#end()
 
 set relativenumber
@@ -32,8 +35,8 @@ set winminwidth=30
 
 set t_ut=""
 set termguicolors
-set background=light
-colorscheme NeoSolarized
+set background=dark
+colorscheme github
 
 syntax on
 filetype plugin indent on
@@ -63,7 +66,7 @@ function! LightlineReload()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'PaperColor',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
      \ }
@@ -75,6 +78,7 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 :imap jj <Esc>
 
 :map <A-f> <C-c>:FZF<CR>
+:map <A-a> <C-c>:Ag<CR>
 
 :map <A-/> <C-c>:NERDTreeFind<CR>
 
