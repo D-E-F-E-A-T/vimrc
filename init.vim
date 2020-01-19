@@ -28,6 +28,10 @@ set expandtab
 set autoindent
 set number
 
+if exists('g:gnvim')
+  set guifont=Iosevka\ Medium\:h14
+endif
+
 set ttyfast
 set winwidth=90
 set winminwidth=30 
