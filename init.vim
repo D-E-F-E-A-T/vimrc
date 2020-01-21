@@ -84,6 +84,11 @@ inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 :map <A-f> <C-c>:FZF<CR>
 :map <A-a> <C-c>:Ag<CR>
+:map <A-w> <C-c><C-w>n<CR>
+:map <A-v> <C-c><C-w>v<CR>
+:map <A-t> <C-c>:split term://zsh<CR>:set nonumber<CR>:set norelativenumber<CR>a
+:map <A-q> <C-c><C-w>q<CR>
+:tnoremap <A-q> <C-\><C-n><C-w>q<CR>
 
 :map <A-/> <C-c>:NERDTreeFind<CR>
 
