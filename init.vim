@@ -29,8 +29,8 @@ set autoindent
 set number
 
 if exists('g:gnvim')
-  set guifont=Iosevka\ Medium\:h14
-endif
+  set guifont=Iosevka\ Medium\:h12
+end
 
 set ttyfast
 set winwidth=90
@@ -39,8 +39,9 @@ set winminwidth=30
 
 set t_ut=""
 set termguicolors
-set background=dark
-colorscheme github
+set background=light
+"colorscheme github
+colorscheme NeoSolarized
 
 syntax on
 filetype plugin indent on
@@ -70,7 +71,7 @@ function! LightlineReload()
 endfunction
 
 let g:lightline = {
-      \ 'colorscheme': 'PaperColor',
+      \ 'colorscheme': 'solarized',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'readonly', 'absolutepath', 'modified' ] ],
      \ }
